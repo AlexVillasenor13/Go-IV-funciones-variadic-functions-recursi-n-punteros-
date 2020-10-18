@@ -12,6 +12,17 @@ func fibonacci(n uint) uint {
     return fibonacci(n-1) + fibonacci(n-2)
 }
 
+func sum(args ...int) int { 
+	result := 0
+	for _, v := range args {
+        if result < v{
+            result = v
+        }
+	}
+
+	return result
+}
+
 func main() {
 
 }
