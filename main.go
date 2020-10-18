@@ -19,8 +19,16 @@ func sum(args ...int) int {
             result = v
         }
 	}
-
 	return result
+}
+
+func generadorImpares() func() uint {
+	i := uint(1) 
+	return func() uint {
+		var impar = i
+		i += 2
+		return impar
+	}
 }
 
 func main() {
