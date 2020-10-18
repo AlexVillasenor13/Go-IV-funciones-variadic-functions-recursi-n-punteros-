@@ -31,6 +31,18 @@ func generadorImpares() func() uint {
 	}
 }
 
-func main() {
+func intercambia(a, b *int){
+    temp := *b
+    *b = *a
+    *a = temp
+}
 
+func main() {
+    var a int
+    var b int
+   	fmt.Scan(&a)
+   	fmt.Scan(&b)
+    fmt.Println(a, b)
+    intercambia(&a, &b)
+    fmt.Println(a, b)
 }
